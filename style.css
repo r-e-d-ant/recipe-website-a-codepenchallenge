@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -=================== VARIABLE ================- */
+:root {
+    --primary-color: rgb(43, 56, 24);
+    --second-color: rgb(255, 98, 83);
+    --primary-color-alt: rgb(46, 146, 101);
+    --red-color: rgb();
+    --red_color-alt: rgb();
+    --white-color: rgb(248, 247, 255);
+    --white-color: #ecf3ff;
+    --indigo-color: rgb(104, 100, 193);
+    --indigo-color-alt: rgb(180, 178, 224);
+    --dark-color: rgb(68, 64, 82);
+    --gray-border: rgb(223, 223, 223);
+}
+:root {
+    --f-family: 'Montserrat', sans-serif;
+}
+/* -=================== BASE ================- */
+body {
+    background-color: #212D40;
+    font-family: var(--f-family);
+    color: rgb(58, 52, 80);
+    scroll-behavior: smooth;
+}
+img {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+    opacity: .8;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 2em;
+}
+/* -=================== HEADER ================- */
+header {
+    margin: .5em 0;
+}
+.header__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--white-color);
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    margin-top: 1em;
+}
+/* -=================== HOME ================- */
+.sub_header {
+    padding: 0 1em;
+}
+.sub {
+    padding: 0 .5em;
+}
+.figure {
+    position: relative;
+}
+.pasta_image__figcaption {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.figcaptions {
+    color: rgb(119, 119, 119);
+    font-family: 'Indie Flower', cursive;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+}
+.description__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+.descri div {
+    color: var(--white-color);
+    font-size: 24px;
+    line-height: 30px;
+    margin: 1em 1em;
+}
+.descri_1, .descri_2 {
+    background: rgba( 33, 45, 64, 0.55 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    margin: 1em 0;
+}
+
+.descri_1:hover, .descri_2:hover {
+    box-shadow: 0 5px 10px rgba(59, 63, 107, 0.2);
+}
+
+.ingredient_image__figcaption {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.recipe_details {
+    margin: 1em 0;
+}
+.recipe_details ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.recipe_details ul li {
+    color: var(--white-color);
+    line-height: 30px;
+    font-size: 18px;
+    margin: .5em 0;
+    padding: .5em 0;
+}
+
+/* -=====================================- */
+.all_instructions {
+    color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+.ingredients__section, .process_section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 10px;
+}
+.ingredients__section {
+    background-color: #364156;
+}
+.process_section {
+    background-color: #212D40;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.title_ingredient {
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: .5em .2em;
+    border-bottom: thin solid #E9F1F7;
+    border-bottom-color: #e9f1f796;
+}
+.bxs-florist, .bx-food-menu {
+    font-size: 40px;
+}
+.ingredients {
+    line-height: 30px;
+    padding: .5em;
+}
+
+.ingredients li {
+    font-size: 20px;
+    padding: .5em 0;
+}
+.variation {
+    padding: .5em;
+    margin-bottom: 1em;
+}
+.bx {
+    color: var(--white-color);
+    font-size: 18px;
+}
+.instructions {
+    padding: .5em;
+}
+.instructions li {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.accordian {
+    cursor: pointer;
+    padding: .5em 0;
+    border-bottom: .1px solid #364866;
+    transition: .4s;
+}
+.active, .accordian:hover {
+    border-radius: 5px;
+    background-color: #364866;
+}
+.bxs-down-arrow {
+    cursor: pointer;
+}
+.in__accordian {
+    font-size: 20px;
+    padding: 0 1.2em;
+    width: 500px;
+    background-color: #364866;
+    border-radius: 5px;
+    display: none;
+    overflow: hidden;
+    transition: .4s;
+}
+
+/* ========================== MEDIA QUERIES =============== */
+
+@media screen and (min-width: 600px) {
+    header {
+        margin: 2em 0;
+    }
+    .description__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .descri_1, .descri_2 {
+        margin: 0 .5em;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 932px) {
+    .recipe_details {
+        padding: 1.5em 0;
+    }
+    .recipe_details ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .recipe_details ul li {
+        margin: .5em 1em;
+        padding: .5em 0;
+        font-size: 22px;
+    }
+    .variation {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .all_instructions {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .ingredients__section, .process_section {
+        padding: 0 1em;
+        margin: 1em .5em;
+        border-radius: 5px;
+        backdrop-filter: blur( 20.0px );
+        -webkit-backdrop-filter: blur( 20.0px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        transition: .4s;
+    }
+    .ingredients__section:hover, .process_section:hover {
+        box-shadow: 0 5px 10px rgba(59, 63, 107, 0.2);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1112px) {
+    
+}
